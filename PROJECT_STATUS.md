@@ -1,7 +1,9 @@
 # PROJECT: APPLE.COM BASELINE CLONE & AUTHENTIC MOTION PORT
-## Current Status: COMPLETED
+## Current Status: COMPLETED & DEPLOYED
 - **Reference Repo:** [https://github.com/morluto/rea](https://github.com/morluto/rea)
 - **Target Website:** [https://www.apple.com/](https://www.apple.com/) & [https://www.apple.com/iphone-duo/](https://www.apple.com/iphone-duo/)
+- **Live Deployment:** [https://yazfboy.github.io/apple-soditec/](https://yazfboy.github.io/apple-soditec/)
+- **Repository:** [https://github.com/yazfboy/apple-soditec](https://github.com/yazfboy/apple-soditec)
 - **Tech Stack:** React 19 + TypeScript + Vite + Tailwind CSS + Lucide Icons
 
 ## Execution Roadmap
@@ -15,3 +17,8 @@
   - [x] Sticky floating controller pill `#aap-media-card-gallery` expanding from 40px to 267px on `scrollY > 250` with section jump dots and master pause.
   - [x] Dual-track Apple TV+ auto-advancing carousel every 4160ms.
   - [x] Playwright MCP automated validation of scroll deltas, active video playback, and responsive morphing.
+- [x] **Stage 5 (GitHub Repository & Pages Setup):**
+  - [x] Configure `base: './'` in `vite.config.ts` and relative video paths in `appleHomeData.ts`.
+  - [x] Configure non-destructive `.gitignore` strictly preserving `_rea_reference/` and `dist/`.
+  - [x] Add GitHub Actions deployment workflow `.github/workflows/deploy.yml`.
+  - [x] Safe commit and push to `https://github.com/yazfboy/apple-soditec.git` (`main` branch).
