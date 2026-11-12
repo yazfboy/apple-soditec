@@ -1,0 +1,249 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --color-apple-dark-bg: #000000;
+  --color-apple-light-bg: #f5f5f7;
+  --color-apple-text-light: #1d1d1f;
+  --color-apple-text-dark: #f5f5f7;
+  --color-apple-text-muted: #86868b;
+  --color-apple-cta: #0071e3;
+  --color-apple-cta-hover: #0077ed;
+  --color-apple-nav-dark: rgba(22, 22, 23, 0.8);
+  --ease-apple: cubic-bezier(0.28, 0.11, 0.32, 1);
+}
+
+@layer base {
+  :root {
+    /* Apple HIG Color Palette (Exact Hex/RGBA) */
+    --apple-bg-dark: #000000;
+    --apple-bg-light: #f5f5f7;
+    --apple-bg-white: #ffffff;
+    --apple-text-light-mode: #1d1d1f;
+    --apple-text-dark-mode: #f5f5f7;
+    --apple-text-muted: #86868b;
+    --apple-cta-primary: #0071e3;
+    --apple-cta-hover: #0077ed;
+    --apple-nav-dark-bg: rgba(22, 22, 23, 0.8);
+    --apple-nav-light-bg: rgba(245, 245, 247, 0.8);
+
+    /* Apple HIG Typography Stack */
+    --font-apple: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    /* Apple HIG Motion Physics (Verified via Playwright Telemetry) */
+    --apple-ease: cubic-bezier(0.28, 0.11, 0.32, 1);
+    --apple-nav-ease: cubic-bezier(0.4, 0, 0.6, 1);
+    --apple-gallery-ease: cubic-bezier(0.645, 0.045, 0.355, 1);
+    --sk-dotnav-variable-duration: 1000ms;
+    --sk-dotnav-timed-duration: 4.16s;
+  }
+
+  html {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.47059;
+    color: #1d1d1f;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.47059;
+    color: #1d1d1f;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-timing-function: cubic-bezier(0.28, 0.11, 0.32, 1);
+  }
+}
+
+/* Apple GlobalNav Glassmorphism */
+.apple-globalnav-blur {
+  background-color: rgba(245, 245, 247, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+.apple-globalnav-dark-blur {
+  background-color: rgba(22, 22, 23, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+.apple-globalnav-flyout {
+  background-color: rgba(245, 245, 247, 0.98);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+/* Apple Hero Section Responsive Heights */
+.apple-hero-section {
+  min-height: 692px;
+  height: 692px;
+}
+
+@media (max-width: 1067px) {
+  .apple-hero-section {
+    min-height: 650px;
+    height: 650px;
+  }
+}
+
+@media (max-width: 733px) {
+  .apple-hero-section {
+    min-height: 500px;
+    height: 500px;
+  }
+}
+
+/* Apple Promo Bento Tile Responsive Heights */
+.apple-promo-tile {
+  height: 580px;
+}
+
+@media (max-width: 1067px) {
+  .apple-promo-tile {
+    height: 490px;
+  }
+}
+
+/* Apple HIG Typography Tokens */
+.typography-hero-headline {
+  font-family: var(--font-apple);
+  font-size: 56px; /* 3.5rem */
+  line-height: 1.07143;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+.typography-hero-subhead {
+  font-family: var(--font-apple);
+  font-size: 28px; /* 1.75rem */
+  line-height: 1.14286;
+  font-weight: 400;
+  letter-spacing: 0.007em;
+}
+
+.typography-nav-text {
+  font-family: var(--font-apple);
+  font-size: 12px;
+  letter-spacing: -0.01em;
+}
+
+.typography-body-text {
+  font-family: var(--font-apple);
+  font-size: 17px;
+  line-height: 1.47059;
+}
+
+.typography-promo-headline {
+  font-family: var(--font-apple);
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: 0em;
+}
+
+.typography-promo-subhead {
+  font-family: var(--font-apple);
+  font-size: 21px;
+  line-height: 1.2381;
+  font-weight: 400;
+  letter-spacing: 0.011em;
+}
+
+@media (max-width: 1068px) {
+  .typography-hero-headline {
+    font-size: 48px;
+    line-height: 1.08349;
+  }
+  .typography-hero-subhead {
+    font-size: 24px;
+    line-height: 1.16667;
+  }
+  .typography-promo-headline {
+    font-size: 32px;
+    line-height: 1.125;
+  }
+  .typography-promo-subhead {
+    font-size: 19px;
+    line-height: 1.21053;
+  }
+}
+
+@media (max-width: 734px) {
+  .typography-hero-headline {
+    font-size: 32px;
+    line-height: 1.125;
+  }
+  .typography-hero-subhead {
+    font-size: 19px;
+    line-height: 1.21053;
+  }
+}
+
+/* MacBook Pro PROLED XDR Display Text Fill (Official Apple CSS Token) */
+.proled-xdr-gradient {
+  background-image: linear-gradient(
+    to right,
+    rgb(253, 211, 15),
+    rgb(244, 246, 247),
+    rgb(144, 206, 238),
+    rgb(72, 167, 244),
+    rgb(39, 137, 255)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hide scrollbars on carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Authentic Apple @keyframes (Extracted via Playwright Telemetry) */
+@keyframes dotnav-timed-animation {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes globalnav-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes ribbon-drop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
